@@ -1,0 +1,42 @@
+/*****************************************************************************
+ * Helper Classes
+ *
+ *  Reusable utility classes.
+ *
+ *****************************************************************************/
+
+/**
+ * .visually-hidden
+ */
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+/**
+ * .container
+ *
+ *  constrain the maximum width on desktop and add a margin
+ *  when within the max-width.
+ */
+.container {
+  --_container-margin: var(--container-margin, 1.5rem); /* mobile is default */
+  --_container-max-width: var(
+    --container-max-width,
+    1280px
+  ); /* desktop max width */
+
+  max-width: var(--_container-max-width);
+  margin-inline: max(
+    50vw - var(--_container-max-width) / 2,
+    var(--_container-margin)
+  );
+}

@@ -1,0 +1,25 @@
+/*****************************************************************************
+ * base
+ *
+ *  Foundational initialization of core elements.
+ *
+ *****************************************************************************/
+
+/**
+ * body
+ */
+body {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 0.9375rem;
+  line-height: 1.667;
+  letter-spacing: -0.23px;
+  color: $clr-neutral-900;
+}
+
+/**
+ * img
+ */
+img {
+  width: 100%;
+}

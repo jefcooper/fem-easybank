@@ -1,0 +1,46 @@
+/*****************************************************************************
+ * variables
+ *
+ *  Global settings used across the site.
+ *
+ *****************************************************************************/
+
+@use "sass:map";
+
+/**
+ * :root
+ *
+ *  The global context for any CSS variables.
+ */
+:root {
+  --container-max-width: 1110px;
+  --container-margin: 1rem;
+}
+
+$container-max-width: 1110px !default;
+$container-margin: 1rem !default;
+
+/// Colors
+$clr-accent-400: hsl(136, 65%, 51%) !default;
+$clr-accent-500: hsl(192, 70%, 51%) !default;
+$clr-accent-900: hsl(233, 26%, 24%) !default;
+
+$clr-neutral-100: hsl(0, 0%, 100%) !default;
+$clr-neutral-200: hsl(0, 0%, 98%) !default;
+$clr-neutral-300: hsl(220, 16%, 96%) !default;
+$clr-neutral-500: hsl(233, 8%, 62%) !default;
+
+/// Font Characteristics
+$font-base: "Public Sans" !default;
+$ff-base: $font-base, sans-serif;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "tablet": 768px,
+  "desktop": 1024px,
+) !default;

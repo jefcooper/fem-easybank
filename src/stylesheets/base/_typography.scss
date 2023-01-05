@@ -1,0 +1,203 @@
+/*****************************************************************************
+ * typography
+ *
+ *  Type hierarchy for the site.
+ *
+ *****************************************************************************/
+
+/*---------------------------------------------------------------------------
+ * Default and mobile typography
+ *--------------------------------------------------------------------------*/
+
+/**
+ * Hero Section Title - Next generation digital banking
+ */
+.heading--1 {
+  font-family: $ff-base;
+  font-weight: $fw-light;
+  font-size: 2.5rem;
+  line-height: 1.175;
+  text-align: center;
+  letter-spacing: -0.714286px;
+  color: $clr-accent-900;
+}
+
+/**
+ * Secondary headings - Why choose easybank
+ */
+.heading--2 {
+  font-family: $ff-base;
+  font-weight: $fw-light;
+  font-size: 2rem;
+  line-height: 1.1875;
+  text-align: center;
+  letter-spacing: -0.571429px;
+  color: $clr-accent-900;
+}
+
+/**
+ * Tertiary headings, card - Online banking
+ */
+.heading--3 {
+  font-family: $ff-base;
+  font-weight: $fw-light;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: -0.357143px;
+  color: $clr-accent-900;
+}
+
+/**
+ * Card heading - receive money in any currency
+ */
+.heading--4 {
+  font-family: $ff-base;
+  font-weight: $fw-light;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-align: left;
+  letter-spacing: -0.285714px;
+  color: $clr-accent-900;
+}
+
+/**
+ * Paragraph text - take your financial life online
+ */
+.text--body-1 {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 0.9375rem;
+  line-height: 1.667;
+  letter-spacing: -0.234375px;
+  color: $clr-neutral-500;
+  text-align: center;
+}
+
+/**
+ * Smaller text in card - The world is getting smaller...
+ */
+.text--body-2 {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 0.8125rem;
+  line-height: 1.3846;
+  color: $clr-neutral-500;
+  text-align: left;
+}
+
+/**
+ * text--card-byline - By Claire Robinson
+ */
+.text--card-byline {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 0.8125rem;
+  line-height: 1.3846;
+  color: $clr-neutral-500;
+  text-align: left;
+  letter-spacing: -0.203125px;
+}
+
+/**
+ * footer--text-nav
+ */
+.text--footer-nav {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 0.9375rem;
+  line-height: 1.7333;
+
+  text-align: center;
+  letter-spacing: -0.234375px;
+
+  color: $clr-neutral-100;
+}
+
+/**
+ * Button text 
+ */
+.btn {
+  font-family: $ff-base;
+  font-weight: $fw-bold;
+  font-size: 0.875rem;
+  line-height: 2;
+  text-align: center;
+  color: $clr-neutral-100;
+}
+
+/**
+ * text--menu
+ */
+.text--menu {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 1.125rem;
+  line-height: 1.667;
+  text-align: center;
+  color: $clr-accent-900;
+  letter-spacing: -0.138462px;
+}
+
+/*---------------------------------------------------------------------------
+ * Typography on Tablet 
+ *--------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+}
+
+/*---------------------------------------------------------------------------
+ * Typography on Desktop 
+ *--------------------------------------------------------------------------*/
+@include media-breakpoint("desktop") {
+  /**
+   * Hero heading
+   */
+  .heading--1 {
+    font-size: 3.5rem;
+    line-height: 1.1429;
+    letter-spacing: -1px;
+    text-align: left;
+  }
+
+  /**
+   * Secondary headings on first page 
+   */
+  .heading--2 {
+    font-size: 2.5rem;
+    line-height: 1.6;
+    letter-spacing: -0.714286px;
+    text-align: left;
+  }
+
+  .heading--3 {
+    font-size: 1.5rem;
+    line-height: 1.1667;
+    letter-spacing: -0.428571px;
+    text-align: left;
+  }
+
+  /**
+   * Paragraph text 
+   */
+  .text--body-1 {
+    font-size: 1.125rem;
+    line-height: 1.56;
+    letter-spacing: -0.28125px;
+    text-align: left;
+  }
+  .text--card-byline {
+    font-size: 0.625rem;
+    line-height: 1.8;
+    letter-spacing: -0.15625px;
+  }
+  /**
+   * text--menu
+   */
+  .text--menu {
+    font-size: 0.875rem;
+    line-height: 1.1429;
+    letter-spacing: -0.107692px;
+
+    color: $clr-neutral-500;
+  }
+}

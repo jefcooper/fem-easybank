@@ -1,0 +1,104 @@
+/*****************************************************************************
+ * icons 
+ *
+ *  Definitions for various svg icons used throughout the site.
+ *
+ *****************************************************************************/
+
+/**
+ * .icon
+ *
+ *  utility class to define clickable svg icon behavior.  Note this is
+ *  located with the individual icons due to BEM naming consistency.
+ */
+.icon {
+  user-select: none;
+  cursor: pointer;
+  transition: 150ms ease-in-out; /* soften hover transition, not so abrupt */
+}
+
+/**
+ * .icon--arrow-left
+ *
+ *  '<' arrow pointing to the left, used in buttons
+ */
+.icon--arrow-left {
+  width: 10px;
+  height: 24px;
+
+  fill: none;
+  stroke: currentcolor;
+}
+
+/**
+ * .icon--arrow-right
+ *
+ *  '>' arrow pointing to the right, used in buttons
+ */
+.icon--arrow-right {
+  width: 10px;
+  height: 24px;
+
+  fill: none;
+  stroke: currentcolor;
+}
+
+/**
+ * .icon--facebook
+ *
+ *  Facebook company logo, used in footer.
+ */
+.icon--facebook {
+  width: 20px;
+  height: 20px;
+
+  fill: currentcolor;
+}
+
+/**
+ * .icon--instagram
+ *
+ *  Instagram company logo, used in footer.
+ */
+.icon--instagram {
+  width: 20px;
+  height: 20px;
+
+  fill: currentcolor;
+}
+
+/**
+ * .icon--twitter
+ *
+ *  Twitter company logo, used in footer.
+ */
+.icon--twitter {
+  width: 20px;
+  height: 17px;
+
+  fill: currentcolor;
+}
+
+/**
+ * .icon--location
+ *
+ *  Map marker for gallery location.  Used with Leaflet on location page.
+ */
+.icon--location {
+  width: 66px;
+  height: 88px;
+
+  fill: currentcolor;
+}
+
+/**
+ * .icon--logo
+ *
+ *  Gallery logo, used in footer.
+ */
+.icon--logo {
+  width: 111px;
+  height: 40px;
+
+  fill: currentcolor;
+}

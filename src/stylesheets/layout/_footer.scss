@@ -1,0 +1,114 @@
+/*****************************************************************************
+ * footer
+ *
+ *  common footer definition for all pages in site.
+ *
+ *****************************************************************************/
+
+/**
+ * .footer
+ *
+ *  used on the <footer> element to set outer box properties.
+ */
+.footer {
+  display: grid;
+  gap: 2.375rem;
+
+  padding-block: 3rem;
+}
+
+/**
+ * .footer--bronze
+ *
+ *  variant used on the location page.
+ */
+.footer--bronze {
+  background-color: $clr-accent-400;
+
+  color: $clr-neutral-900;
+}
+
+/**
+ * .footer--bronze .icon:hover
+ *
+ *  change hover color when the --bronze variant is used.
+ */
+.footer--bronze .icon:hover {
+  color: $clr-neutral-100;
+}
+
+/**
+ * .footer--black
+ *
+ *  apply to use black background variant of footer on home page
+ */
+.footer--black {
+  background-color: $clr-neutral-900;
+
+  color: $clr-neutral-100;
+}
+
+/**
+ * .footer .icon:hover
+ *
+ *  default behavior on hovering over the arrow icon
+ */
+.footer--black .icon:hover {
+  color: $clr-accent-400;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  /**
+   * note: don't know what this is doing here, need to move it
+   */
+  :root {
+    --container-margin: 2.5rem;
+  }
+
+  /**
+   * .footer
+   *
+   *  on tablet change to a horizontal row rather than mobile column.
+   */
+  .footer {
+    grid-auto-flow: column;
+    gap: 4rem;
+
+    padding-block: 3.5rem;
+  }
+
+  /**
+   * .footer__text
+   *
+   *  limit the paragraph width for better readability.
+   */
+  .footer__text {
+    width: 25ch;
+  }
+}
+
+/*----------------------------------------------------------------------------
+  Desktop breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  /**
+   * .footer
+   *
+   *  increase vertical padding on desktop
+   */
+  .footer {
+    padding-block: 5rem;
+  }
+
+  /**
+   * .footer .icon--logo
+   *
+   *  increase the size of the logo on desktop
+   */
+  .footer .icon--logo {
+    zoom: 1.45;
+  }
+}

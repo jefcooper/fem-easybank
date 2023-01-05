@@ -1,0 +1,71 @@
+/*****************************************************************************
+ * button
+ *
+ *  btn component class
+ *
+ *****************************************************************************/
+
+/**
+  * .btn
+  *
+  *   main button styling class, used with every button.
+  */
+.btn {
+  // note: using css properties here so we can reverse them in hover by color reference
+  --_clr-button-left: #{$clr-neutral-900};
+  --_clr-button-right: #{$clr-accent-400};
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  justify-self: flex-start;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  background-color: var(--_clr-button-left);
+
+  color: $clr-neutral-100;
+
+  user-select: none;
+  cursor: pointer;
+  transition: 150ms ease-in-out; // soften hover transition
+}
+
+/**
+ * .btn:hover
+ *
+ *  for hover state, reverse the colors on left/right.
+ */
+.btn:hover {
+  --_clr-button-left: #{$clr-accent-400};
+  --_clr-button-right: #{$clr-neutral-900};
+}
+
+/**
+ * .btn__text
+ *
+ *  apply to the visible text describing the button when shown.
+ */
+.btn__text {
+  padding-inline: 2rem;
+}
+
+/**
+ * .btn__arrow
+ *
+ *  apply to the icon arrow on the left/right of the button
+ */
+.btn__arrow {
+  display: grid;
+  place-items: center;
+
+  width: 3.5rem;
+  height: 4.5rem;
+
+  background-color: var(--_clr-button-right);
+
+  transition: 150ms ease-in-out; /* soften hover transition */
+}
