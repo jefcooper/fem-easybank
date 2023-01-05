@@ -20,10 +20,10 @@ function menuToggleListener() {
     if (el) {
       if (el.hasAttribute("aria-expanded")) {
         el.removeAttribute("aria-expanded");
-        document.body.classList.remove("modal");
+        document.body.classList.remove("menu__modal");
       } else {
         el.setAttribute("aria-expanded", "true");
-        document.body.classList.add("modal");
+        document.body.classList.add("menu__modal");
       }
       evt.preventDefault();
       evt.stopPropagation();
@@ -34,7 +34,7 @@ function menuToggleListener() {
 
       if (toggle && toggle.hasAttribute("aria-expanded")) {
         toggle.removeAttribute("aria-expanded");
-        document.body.classList.remove("modal");
+        document.body.classList.remove("menu__modal");
         evt.preventDefault();
         evt.stopPropagation();
       }

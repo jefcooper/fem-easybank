@@ -19,11 +19,11 @@
 .menu {
   --menu-gap: 2rem;
   --menu-vertical-gap: 1rem;
-  --menu-background-color: hsl(0 0% 100% / 0%);
-  --menu-popup-color: var(--clr-neutral-900);
-  --menu-popup-background-color: var(--clr-neutral-100);
-  --menu-color: var(--clr-neutral-100);
-  --menu-hover-color: var(--clr-neutral-400);
+  --menu-background-color: #{$clr-neutral-100};
+  --menu-popup-color: #{$clr-neutral-900};
+  --menu-popup-background-color: #{$clr-neutral-100};
+  --menu-color: #{$clr-neutral-900};
+  --menu-hover-color: #{$clr-neutral-500};
   --menu-padding-block: 1.5rem;
   --menu-padding-inline: 1rem;
   --menu-overlay-color: hsl(0 0% 0% / 50%);
@@ -39,6 +39,9 @@
   padding-inline: var(--menu-padding-inline);
 
   background-color: var(--menu-background-color);
+}
+.menu__modal {
+  overflow: hidden;
 }
 .menu__overlay {
   display: none;
@@ -119,7 +122,7 @@
   user-select: none;
 }
 .menu a:hover {
-  border-bottom: 2px solid var(--clr-neutral-100);
+  border-bottom: 2px solid #{$clr-neutral-100};
 }
 .menu__logo {
   font-size: 1.5rem;
@@ -140,7 +143,7 @@
 /* Tablet and above */
 @media screen and (min-width: 768px) {
   .menu {
-    --menu-popup-color: var(--clr-neutral-100);
+    --menu-popup-color: #{$clr-neutral-900};
   }
   .menu__options {
     position: relative;
