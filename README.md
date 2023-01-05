@@ -1,8 +1,8 @@
-# Frontend Mentor - Challenge
+# Easybank Frontend Mentor - Challenge
 
 [![Deploy Site to GitHub Pages](https://github.com/jefcooper/fem-easybank/actions/workflows/static.yml/badge.svg)](https://github.com/jefcooper/fem-easybank/actions/workflows/static.yml)
 
-Live on Github Pages: https://jefcooper.github.io/fem-template
+Live on Github Pages: https://jefcooper.github.io/fem-easybank
 
 This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 

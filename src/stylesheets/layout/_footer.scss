@@ -11,6 +11,8 @@
  *  used on the <footer> element to set outer box properties.
  */
 .footer {
+  color: $clr-neutral-100;
+  background-color: $clr-accent-900;
   display: grid;
   gap: 2.375rem;
 

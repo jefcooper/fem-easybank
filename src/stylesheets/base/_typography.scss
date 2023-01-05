@@ -87,6 +87,19 @@
 }
 
 /**
+ * Card text - our modern web and mobile applications
+ */
+.text--body-3 {
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+  font-size: 0.9375rem;
+  line-height: 1.667;
+  letter-spacing: -0.234375px;
+  color: $clr-neutral-500;
+  text-align: center;
+}
+
+/**
  * text--card-byline - By Claire Robinson
  */
 .text--card-byline {
@@ -184,6 +197,11 @@
     line-height: 1.56;
     letter-spacing: -0.28125px;
     text-align: left;
+  }
+  .text--body-3 {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.25px;
   }
   .text--card-byline {
     font-size: 0.625rem;

@@ -18,29 +18,63 @@
 }
 
 /**
- * .icon--arrow-left
- *
- *  '<' arrow pointing to the left, used in buttons
+ * .icon--online
  */
-.icon--arrow-left {
-  width: 10px;
-  height: 24px;
+.icon--online {
+  width: 72px;
+  height: 72px;
 
-  fill: none;
-  stroke: currentcolor;
+  fill: currentcolor;
 }
 
 /**
- * .icon--arrow-right
- *
- *  '>' arrow pointing to the right, used in buttons
+ * .icon--budgeting
  */
-.icon--arrow-right {
-  width: 10px;
-  height: 24px;
+.icon--budgeting {
+  width: 72px;
+  height: 72px;
 
-  fill: none;
-  stroke: currentcolor;
+  fill: currentcolor;
+}
+
+/**
+ * .icon--onboarding
+ */
+.icon--onboarding {
+  width: 72px;
+  height: 72px;
+
+  fill: currentcolor;
+}
+
+/**
+ * .icon--api
+ */
+.icon--api {
+  width: 72px;
+  height: 72px;
+
+  fill: currentcolor;
+}
+
+/**
+ * .icon--hamburger
+ */
+.icon--hamburger {
+  width: 24px;
+  height: 11px;
+
+  fill: currentcolor;
+}
+
+/**
+ * .icon--close
+ */
+.icon--close {
+  width: 18px;
+  height: 19px;
+
+  fill: currentcolor;
 }
 
 /**
@@ -54,6 +88,17 @@
 
   fill: currentcolor;
 }
+/**
+ * .icon--youtube
+ *
+ * YouTube logo
+ */
+.icon--youtube {
+  width: 21px;
+  height: 20px;
+
+  fill: currentcolor;
+}
 
 /**
  * .icon--instagram
@@ -61,7 +106,7 @@
  *  Instagram company logo, used in footer.
  */
 .icon--instagram {
-  width: 20px;
+  width: 21px;
   height: 20px;
 
   fill: currentcolor;
@@ -73,20 +118,18 @@
  *  Twitter company logo, used in footer.
  */
 .icon--twitter {
-  width: 20px;
-  height: 17px;
+  width: 21px;
+  height: 18px;
 
   fill: currentcolor;
 }
-
 /**
- * .icon--location
- *
- *  Map marker for gallery location.  Used with Leaflet on location page.
+ * .icon--pinterest
+ *  Pinterest company logo, used in footer.
  */
-.icon--location {
-  width: 66px;
-  height: 88px;
+.icon--pinterest {
+  width: 20px;
+  height: 20px;
 
   fill: currentcolor;
 }
@@ -94,11 +137,10 @@
 /**
  * .icon--logo
  *
- *  Gallery logo, used in footer.
+ *  Easybank logo
  */
 .icon--logo {
-  width: 111px;
-  height: 40px;
-
-  fill: currentcolor;
+  width: 139px;
+  height: 20px;
+  fill: red;
 }
