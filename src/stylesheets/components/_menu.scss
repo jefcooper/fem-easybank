@@ -22,18 +22,20 @@
   */
 .menu {
   --menu-gap: 2rem;
-  --menu-vertical-gap: 1rem;
+  --menu-bar-height: 4rem;
+  --menu-vertical-gap: 1.5rem;
   --menu-background-color: var(--theme-bg-100);
   --menu-popup-color: var(--theme-txt-900);
   --menu-popup-background-color: var(--theme-bg-100);
   --menu-color: var(--theme-txt-900);
   --menu-hover-color: var(--theme-txt-400);
   --menu-padding-block: 1.5rem;
-  --menu-padding-inline: 1rem;
+  --menu-padding-inline: 1.5rem;
   --menu-overlay-color: var(--theme-menu-overlay);
 
   position: absolute;
   width: 100%;
+  height: var(--menu-bar-height);
   display: flex;
   z-index: 3;
   align-items: center;
@@ -71,11 +73,22 @@
   height: 100vh;
   z-index: 3;
 }
+
+/**
+ * swap hamburger and X when menu toggles open/closed
+ */
+.menu__toggle[aria-expanded="true"] .icon--hamburger {
+  display: none;
+}
+.menu__toggle:not([aria-expanded="true"]) .icon--close {
+  display: none;
+}
+
 .menu__toggle[aria-expanded="true"] ~ .menu__overlay {
   position: absolute;
   display: block;
   inset: 0;
-  top: 4.25rem;
+  top: var(--menu-bar-height);
   z-index: 3;
 
   background: var(--menu-overlay-color);
@@ -138,23 +151,24 @@
   inset: 0;
 }
 .menu--inset .menu__toggle[aria-expanded="true"] ~ .menu__options {
-  top: 5rem;
-  left: 2rem;
-  right: 2rem;
+  top: 5.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
 
   padding: 2rem;
+
+  justify-items: center;
 }
 .menu a {
   font-family: var(--ff-base);
   font-size: 1rem;
   color: var(--menu-popup-color, black);
 
-  text-transform: lowercase;
+  text-transform: capitalize;
   text-decoration: none;
   user-select: none;
 }
 .menu a:hover {
-  border-bottom: 2px solid #{$clr-neutral-100};
 }
 .menu__logo {
   font-size: 1.5rem;
@@ -163,13 +177,16 @@
   user-select: none;
   cursor: pointer;
 }
-.menu__logo:hover {
-  color: var(--menu-hover-color);
-  fill: var(--menu-hover-color);
-}
 .menu__break {
   padding-top: 1rem;
   border-top: 1px solid black;
+}
+
+/* Mobile-only */
+@media screen and (max-width: 767px) {
+  .menu__hide-on-mobile {
+    display: none;
+  }
 }
 
 /* Tablet and above */
