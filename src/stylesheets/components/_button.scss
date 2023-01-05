@@ -12,7 +12,7 @@
   */
 .btn {
   // note: using css properties here so we can reverse them in hover by color reference
-  --_clr-button-left: #{$clr-neutral-900};
+  --_clr-button-left: #{$clr-accent-900};
   --_clr-button-right: #{$clr-accent-400};
 
   display: grid;
@@ -41,7 +41,7 @@
  */
 .btn:hover {
   --_clr-button-left: #{$clr-accent-400};
-  --_clr-button-right: #{$clr-neutral-900};
+  --_clr-button-right: #{$clr-accent-900};
 }
 
 /**
