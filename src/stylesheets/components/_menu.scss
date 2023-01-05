@@ -1,0 +1,167 @@
+/*****************************************************************************
+  .menu
+
+    The menu provides a responsive menu with mobile/tablet/desktop breakpoints.
+    When collapsed a hamburger menu is shown on right.
+
+    Expanded styling is controlled with the following accessory classes:
+    .menu--full          - the mobile menu covers the entire screen when opened
+    .menu--full-top      - the mobile menu covers the entire top left to right
+    .menu--full-right    - the mobile menu is full height on the right
+    .menu--inset         - the mobile menu is inset below the menu bar
+
+    .menu__logo a        - provides an embedded logo (optional)
+    .menu__toggle button - provides the mobile hamburger menu button
+    .menu__overlay div   - is required to cover the underlying content
+    .menu__options ul    - provides the list of menu options
+    .menu__break         - provides a visible separator/gap to group menus
+ *****************************************************************************/
+.menu {
+  --menu-gap: 2rem;
+  --menu-vertical-gap: 1rem;
+  --menu-background-color: hsl(0 0% 100% / 0%);
+  --menu-popup-color: var(--clr-neutral-900);
+  --menu-popup-background-color: var(--clr-neutral-100);
+  --menu-color: var(--clr-neutral-100);
+  --menu-hover-color: var(--clr-neutral-400);
+  --menu-padding-block: 1.5rem;
+  --menu-padding-inline: 1rem;
+  --menu-overlay-color: hsl(0 0% 0% / 50%);
+
+  position: absolute;
+  width: 100%;
+  display: flex;
+  z-index: 3;
+  align-items: center;
+  gap: var(--menu-gap);
+
+  padding-block: var(--menu-padding-block);
+  padding-inline: var(--menu-padding-inline);
+
+  background-color: var(--menu-background-color);
+}
+.menu__overlay {
+  display: none;
+  height: 100vh;
+  z-index: 3;
+}
+.menu__toggle[aria-expanded="true"] ~ .menu__overlay {
+  position: absolute;
+  display: block;
+  inset: 0;
+  z-index: 3;
+
+  background-color: var(--menu-overlay-color);
+}
+.menu__toggle {
+  margin-left: auto;
+  border: 0;
+
+  background-color: transparent;
+}
+.menu__toggle:hover {
+  --menu-color: white;
+}
+
+.menu__options {
+  position: absolute;
+  z-index: 3;
+  display: none;
+  align-content: flex-start;
+  align-items: center;
+  gap: var(--menu-vertical-gap);
+
+  background-color: var(--menu-background-color);
+}
+.menu__options li {
+  width: fit-content;
+}
+.menu__toggle[aria-expanded="true"] ~ .menu__options {
+  display: grid;
+}
+
+.menu--full-right .menu__toggle[aria-expanded="true"] ~ .menu__options {
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 4rem;
+}
+.menu--full-top .menu__toggle[aria-expanded="true"] ~ .menu__options {
+  grid-auto-flow: column;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding-block: 3rem;
+  padding-inline: 1.625rem;
+
+  background-color: var(--menu-popup-background-color);
+}
+.menu--full .menu__toggle[aria-expanded="true"] ~ .menu__options {
+  inset: 0;
+}
+.menu--inset .menu__toggle[aria-expanded="true"] ~ .menu__options {
+  top: 5rem;
+  left: 2rem;
+  right: 2rem;
+
+  padding: 2rem;
+}
+.menu a {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  color: var(--menu-popup-color, black);
+
+  text-transform: lowercase;
+  text-decoration: none;
+  user-select: none;
+}
+.menu a:hover {
+  border-bottom: 2px solid var(--clr-neutral-100);
+}
+.menu__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  user-select: none;
+  cursor: pointer;
+}
+.menu__logo:hover {
+  color: var(--menu-hover-color);
+  fill: var(--menu-hover-color);
+}
+.menu__break {
+  padding-top: 1rem;
+  border-top: 1px solid black;
+}
+
+/* Tablet and above */
+@media screen and (min-width: 768px) {
+  .menu {
+    --menu-popup-color: var(--clr-neutral-100);
+  }
+  .menu__options {
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: 0;
+    display: flex;
+    gap: var(--menu-gap);
+
+    width: 100%;
+    padding: 0;
+  }
+  .menu__toggle {
+    display: none;
+  }
+  .menu__label {
+    display: none;
+  }
+  .menu__break {
+    margin-left: auto;
+    padding-top: 0;
+    border-top: none;
+  }
+}
