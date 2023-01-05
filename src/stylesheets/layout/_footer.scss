@@ -11,32 +11,12 @@
  *  used on the <footer> element to set outer box properties.
  */
 .footer {
-  color: $clr-neutral-100;
-  background-color: $clr-accent-900;
+  color: var(--theme-txt-100);
+  background-color: var(--theme-bg-900);
   display: grid;
   gap: 2.375rem;
 
   padding-block: 3rem;
-}
-
-/**
- * .footer--bronze
- *
- *  variant used on the location page.
- */
-.footer--bronze {
-  background-color: $clr-accent-400;
-
-  color: $clr-accent-900;
-}
-
-/**
- * .footer--bronze .icon:hover
- *
- *  change hover color when the --bronze variant is used.
- */
-.footer--bronze .icon:hover {
-  color: $clr-neutral-100;
 }
 
 /**
@@ -45,9 +25,9 @@
  *  apply to use black background variant of footer on home page
  */
 .footer--black {
-  background-color: $clr-accent-900;
+  background-color: var(--theme-bg-900);
 
-  color: $clr-neutral-100;
+  color: var(--theme-txt-100);
 }
 
 /**
@@ -56,7 +36,7 @@
  *  default behavior on hovering over the arrow icon
  */
 .footer--black .icon:hover {
-  color: $clr-accent-400;
+  color: var(--theme-accent-400);
 }
 
 /*----------------------------------------------------------------------------

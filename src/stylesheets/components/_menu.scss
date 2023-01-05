@@ -16,17 +16,21 @@
     .menu__options ul    - provides the list of menu options
     .menu__break         - provides a visible separator/gap to group menus
  *****************************************************************************/
+
+/**
+  * menu
+  */
 .menu {
   --menu-gap: 2rem;
   --menu-vertical-gap: 1rem;
-  --menu-background-color: #{$clr-neutral-100};
-  --menu-popup-color: #{$clr-neutral-900};
-  --menu-popup-background-color: #{$clr-neutral-100};
-  --menu-color: #{$clr-neutral-900};
-  --menu-hover-color: #{$clr-neutral-500};
+  --menu-background-color: var(--theme-bg-100);
+  --menu-popup-color: var(--theme-txt-900);
+  --menu-popup-background-color: var(--theme-bg-100);
+  --menu-color: var(--theme-txt-900);
+  --menu-hover-color: var(--theme-txt-400);
   --menu-padding-block: 1.5rem;
   --menu-padding-inline: 1rem;
-  --menu-overlay-color: hsl(0 0% 0% / 50%);
+  --menu-overlay-color: var(--theme-menu-overlay);
 
   position: absolute;
   width: 100%;
@@ -40,9 +44,28 @@
 
   background-color: var(--menu-background-color);
 }
+.menu nav {
+  z-index: 100;
+  background-color: var(--menu-background-color);
+}
+
+/**
+ * menu__modal
+ *
+ *  this class is added to document.body in order to stop scrolling when the
+ *  mobile menu is toggled open.
+ */
 .menu__modal {
   overflow: hidden;
 }
+
+/**
+ * menu__overlay
+ *
+ *  the menu overlay is used for translucent or opaque backgrounds behind the
+ *  mobile menu.  A div with this class is added before the ul in the nav
+ *  and its visibility is toggled when the mobile menu is open.
+ */
 .menu__overlay {
   display: none;
   height: 100vh;
@@ -52,10 +75,19 @@
   position: absolute;
   display: block;
   inset: 0;
+  top: 4.25rem;
   z-index: 3;
 
-  background-color: var(--menu-overlay-color);
+  background: var(--menu-overlay-color);
 }
+
+/**
+ * menu__toggle
+ *
+ *  The menu__toggle is attached to a button that receives aria-expanded when
+ *  the mobile menu is open.  The button also operates the menu and usually
+ *  has the hamburger menu icon attached.
+ */
 .menu__toggle {
   margin-left: auto;
   border: 0;

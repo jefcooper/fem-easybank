@@ -11,10 +11,6 @@
   *   main button styling class, used with every button.
   */
 .btn {
-  // note: using css properties here so we can reverse them in hover by color reference
-  --_clr-button-left: #{$clr-accent-900};
-  --_clr-button-right: #{$clr-accent-400};
-
   display: grid;
   grid-auto-flow: column;
   justify-content: flex-start;
@@ -23,11 +19,14 @@
 
   margin: 0;
   padding: 0;
+  padding-inline: 2em;
+  padding-block: 1em;
   border: 0;
+  border-radius: 10rem;
 
-  background-color: var(--_clr-button-left);
+  background-image: var(--theme-btn-bg);
 
-  color: $clr-neutral-100;
+  color: var(--theme-btn-txt);
 
   user-select: none;
   cursor: pointer;
@@ -40,32 +39,5 @@
  *  for hover state, reverse the colors on left/right.
  */
 .btn:hover {
-  --_clr-button-left: #{$clr-accent-400};
-  --_clr-button-right: #{$clr-accent-900};
-}
-
-/**
- * .btn__text
- *
- *  apply to the visible text describing the button when shown.
- */
-.btn__text {
-  padding-inline: 2rem;
-}
-
-/**
- * .btn__arrow
- *
- *  apply to the icon arrow on the left/right of the button
- */
-.btn__arrow {
-  display: grid;
-  place-items: center;
-
-  width: 3.5rem;
-  height: 4.5rem;
-
-  background-color: var(--_clr-button-right);
-
-  transition: 150ms ease-in-out; /* soften hover transition */
+  opacity: 60%;
 }

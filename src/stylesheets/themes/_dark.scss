@@ -18,21 +18,21 @@
 
 @use "sass:color";
 
-.theme--default {
+.theme--dark {
   // four bg's.  dark, white, light-gray, medium-gray
-  --theme-bg-100: #{$clr-neutral-100};
-  --theme-bg-200: #{$clr-neutral-200};
-  --theme-bg-400: #{$clr-neutral-300};
-  --theme-bg-900: #{$clr-neutral-900};
-  --theme-bg-900-400: #{color.change($clr-neutral-900, $alpha: 0.5)};
+  --theme-bg-100: #{$clr-neutral-900};
+  --theme-bg-200: #{$clr-neutral-300};
+  --theme-bg-400: #{$clr-neutral-200};
+  --theme-bg-900: #{$clr-neutral-100};
+  --theme-bg-900-400: #{color.change($clr-neutral-100, $alpha: 0.5)};
 
-  --theme-txt-100-400: #{color.change($clr-neutral-100, $alpha: 0.5)};
-  --theme-txt-100: #{$clr-neutral-100};
+  --theme-txt-100-400: #{color.change($clr-neutral-900, $alpha: 0.5)};
+  --theme-txt-100: #{$clr-neutral-900};
   --theme-txt-400: #{$clr-neutral-500};
-  --theme-txt-900: #{$clr-neutral-900};
+  --theme-txt-900: #{$clr-neutral-100};
 
   --theme-accent-400: #{$clr-accent-400};
-  --theme-btn-txt: #{$clr-neutral-100};
+  --theme-btn-txt: #{$clr-neutral-900};
   --theme-btn-bg: linear-gradient(
     135deg,
     #{$clr-accent-400},
