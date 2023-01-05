@@ -11,32 +11,27 @@
  *  used on the <footer> element to set outer box properties.
  */
 .footer {
-  color: var(--theme-txt-100);
-  background-color: var(--theme-bg-900);
   display: grid;
-  gap: 2.375rem;
+  justify-content: center;
+  justify-items: center;
+  gap: 2rem;
 
   padding-block: 3rem;
-}
-
-/**
- * .footer--black
- *
- *  apply to use black background variant of footer on home page
- */
-.footer--black {
-  background-color: var(--theme-bg-900);
 
   color: var(--theme-txt-100);
+  background-color: var(--theme-bg-900);
 }
 
-/**
- * .footer .icon:hover
- *
- *  default behavior on hovering over the arrow icon
- */
-.footer--black .icon:hover {
-  color: var(--theme-accent-400);
+.footer nav {
+  text-align: center;
+}
+
+.footer li + li {
+  margin-top: 0.5rem;
+}
+
+.footer a:hover {
+  color: var(--theme-hover-highlight);
 }
 
 /*----------------------------------------------------------------------------
@@ -83,14 +78,5 @@
    */
   .footer {
     padding-block: 5rem;
-  }
-
-  /**
-   * .footer .icon--logo
-   *
-   *  increase the size of the logo on desktop
-   */
-  .footer .icon--logo {
-    zoom: 1.45;
   }
 }

@@ -42,4 +42,5 @@
     #{$clr-neutral-900},
     #{color.change($clr-neutral-900, $alpha: 0)}
   );
+  --theme-hover-highlight: #{$clr-accent-400};
 }
