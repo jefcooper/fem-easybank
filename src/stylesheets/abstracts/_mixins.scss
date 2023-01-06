@@ -33,3 +33,19 @@
     @content;
   }
 }
+
+/**
+ * media-breakpoint-max
+ *
+ *  This variant sets an upper bound on the breakpoint and should be read,
+ *  if width is less than breakpoint.  i.e. less than 'tablet' === 'mobile'.
+ */
+@mixin media-breakpoint-max($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+
+  @media screen and (max-width: calc(#{$mq-breakpoint} - 1px)) {
+    @content;
+  }
+}

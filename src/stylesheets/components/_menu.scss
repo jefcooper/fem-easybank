@@ -182,14 +182,16 @@
 }
 
 /* Mobile-only */
-@media screen and (max-width: 767px) {
+@include media-breakpoint-max("tablet") {
   .menu__hide-on-mobile {
     display: none;
   }
 }
 
-/* Tablet and above */
-@media screen and (min-width: 768px) {
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
   .menu {
     --menu-popup-color: #{$clr-neutral-900};
   }
