@@ -70,13 +70,6 @@
 /*----------------------------------------------------------------------------
   Desktop breakpoint
  ----------------------------------------------------------------------------*/
-@include media-breakpoint("tablet") {
-  /**
-   * .footer
-   *
-   *  increase vertical padding on desktop
-   */
-  .footer {
-    padding-block: 5rem;
-  }
+@include media-breakpoint("desktop") {
+  // No content
 }

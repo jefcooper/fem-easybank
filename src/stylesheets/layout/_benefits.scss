@@ -22,9 +22,10 @@
  * benefits__cards
  */
 .benefits__cards {
-  margin-top: 4.5rem;
   display: grid;
   gap: 2rem;
+
+  margin-top: 4.5rem;
 }
 
 /**
@@ -42,4 +43,26 @@
 .benefits__card-img {
   width: 72px;
   height: 72px;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  .benefits {
+    padding-block: pxToRem(96px);
+  }
+  .benefits__cards {
+    grid-auto-flow: column;
+  }
+  .benefits__card {
+    justify-items: left;
+    gap: 1.5rem;
+  }
+  .benefits__card .text--body-3 {
+    text-align: left;
+  }
+  .benefits__card-img {
+    margin-bottom: 1rem;
+  }
 }
