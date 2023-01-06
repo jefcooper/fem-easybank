@@ -44,7 +44,6 @@
   gap: var(--menu-gap);
 
   padding-block: var(--menu-padding-block);
-  //padding-inline: var(--menu-padding-inline);
   padding-inline: max(
     $container-margin,
     calc(50vw - math.div($container-max-width, 2))
@@ -174,8 +173,6 @@
   text-decoration: none;
   user-select: none;
 }
-.menu a:hover {
-}
 .menu__logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -184,10 +181,7 @@
   cursor: pointer;
 }
 .menu__break {
-  /*
-  padding-top: 1rem;
-  border-top: 1px solid black;
-  */
+  // no content
 }
 
 /* Mobile-only */
