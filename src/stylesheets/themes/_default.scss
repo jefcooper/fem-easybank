@@ -38,9 +38,17 @@
     #{$clr-accent-400},
     #{$clr-accent-500}
   );
+  --theme-hover-highlight: #{$clr-accent-400};
+
+  // menu colors
+  --theme-menu-text: #{$clr-neutral-300};
+  --theme-menu-text-highlight: #{$clr-neutral-500};
+  --theme-menu-accent: #{$clr-accent-400};
+  --theme-menu-background: #{$clr-neutral-100};
+  --theme-menu-popup-color: #{$clr-neutral-900};
+  --theme-menu-popup-background: #{$clr-neutral-100};
   --theme-menu-overlay: linear-gradient(
     #{$clr-neutral-900},
     #{color.change($clr-neutral-900, $alpha: 0)}
   );
-  --theme-hover-highlight: #{$clr-accent-400};
 }

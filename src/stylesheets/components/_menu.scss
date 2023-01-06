@@ -17,8 +17,6 @@
     .menu__break         - provides a visible separator/gap to group menus
  *****************************************************************************/
 
-@use "sass:math";
-
 /**
   * menu
   */
@@ -26,13 +24,14 @@
   --menu-gap: 2rem;
   --menu-bar-height: 4rem;
   --menu-vertical-gap: 1.5rem;
-  --menu-background-color: var(--theme-bg-100);
-  --menu-popup-color: var(--theme-txt-900);
-  --menu-popup-background-color: var(--theme-bg-100);
-  --menu-color: var(--theme-txt-900);
-  --menu-hover-color: var(--theme-txt-400);
   --menu-padding-block: 1.5rem;
   --menu-padding-inline: 1.5rem;
+
+  --menu-background-color: var(--theme-menu-background);
+  --menu-popup-color: var(--theme-menu-popup-color);
+  --menu-popup-background-color: var(--theme-menu-popup-background);
+  --menu-color: var(--theme-menu-text);
+  --menu-hover-color: var(--theme-menu-text-highlight);
   --menu-overlay-color: var(--theme-menu-overlay);
 
   position: absolute;
@@ -170,6 +169,9 @@
   text-decoration: none;
   user-select: none;
 }
+.menu a:hover {
+  color: var(--menu-hover-color);
+}
 .menu__logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -193,7 +195,7 @@
  ----------------------------------------------------------------------------*/
 @include media-breakpoint("tablet") {
   .menu {
-    --menu-popup-color: #{$clr-neutral-900};
+    --menu-popup-color: var(--menu-popup-color);
   }
   .menu__options {
     position: relative;
@@ -216,5 +218,16 @@
     margin-left: auto;
     padding-top: 0;
     border-top: none;
+  }
+  .menu__options li {
+    width: fit-content;
+  }
+  .menu__options a {
+    border-bottom: 4px solid transparent;
+    padding-bottom: 19px;
+  }
+  .menu__options a:hover {
+    border-color: var(--theme-menu-accent);
+    transition: 250ms ease-in-out;
   }
 }
