@@ -44,10 +44,7 @@
   gap: var(--menu-gap);
 
   padding-block: var(--menu-padding-block);
-  padding-inline: max(
-    $container-margin,
-    calc(50vw - math.div($container-max-width, 2))
-  );
+  padding-inline: max($container-margin, calc(50vw - $container-max-width / 2));
 
   background-color: var(--menu-background-color);
 }
