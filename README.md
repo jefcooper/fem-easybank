@@ -33,23 +33,27 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repository](https://github.com/jefcooper/fem-template)
-- Live Site URL: [Github Pages](https://jefcooper.github.io/fem-template)
+- Solution URL: [Github Repository](https://github.com/jefcooper/fem-easybank)
+- Live Site URL: [Github Pages](https://jefcooper.github.io/fem-easybank)
 
 ## My process
 
 ### Built with
 
+- Mobile-first workflow
+- Sass, 7-1 architecture
 - Semantic HTML5 markup
 - Sass (scss) 7-1 architecture
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - Github Actions
 - Github Pages
 - npm / vite
 
 ### What I learned
+
+- Continuing my journey to introduce Sass into my workflow.  This time I used a two stage definition of colors, with base colors defined in _variables.scss and a themes/_default.scss to define how the colors are applied in the page.
+- Refined my menu a bit and introduced more Sass variables into it.
 
 ### Bugs and Finishing Steps
 
