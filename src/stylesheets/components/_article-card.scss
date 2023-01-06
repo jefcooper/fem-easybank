@@ -4,3 +4,37 @@
  *  An article description card.
  *
  *****************************************************************************/
+
+/**
+ * article-card
+ *
+ *  this contains the entire card
+ */
+.article-card {
+  height: 395px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--theme-bg-100);
+}
+
+/**
+ * article-card__img
+ *
+ *  this adjusts the image at the top of the article
+ */
+.article-card__img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/**
+ * article-card__text-section
+ *
+ *  this area contains the byline, title and precis of the article
+ */
+.article-card__text-section {
+  display: grid;
+  gap: 0.5rem;
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+}

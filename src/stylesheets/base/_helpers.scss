@@ -27,7 +27,7 @@
  *  constrain the maximum width on desktop and add a margin
  *  when within the max-width.
  */
-.container {
+.container > * {
   --_container-margin: var(--container-margin, 1.5rem); /* mobile is default */
   --_container-max-width: var(
     --container-max-width,

@@ -11,16 +11,35 @@
   *   Benefits section
   */
 .benefits {
+  background-color: var(--theme-bg-400);
+  padding-block: 4rem;
 }
 
+.benefits .text--body-1 {
+  margin-top: 1rem;
+}
 /**
  * benefits__cards
  */
 .benefits__cards {
+  margin-top: 4.5rem;
+  display: grid;
+  gap: 2rem;
 }
 
 /**
  * benefits__card
  */
 .benefits__card {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+/**
+ * benefits__card-img
+ */
+.benefits__card-img {
+  width: 72px;
+  height: 72px;
 }

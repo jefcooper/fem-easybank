@@ -11,4 +11,16 @@
   *   Hero section
   */
 .hero {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 1rem;
+
+  padding-bottom: 5.5rem;
+
+  background-color: var(--theme-bg-200);
+}
+
+.hero__btn {
+  margin-top: 1rem;
 }

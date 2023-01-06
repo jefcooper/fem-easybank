@@ -11,4 +11,14 @@
   *   Latest articles section
   */
 .latest-articles {
+  padding-block: pxToRem(88px);
+  background-color: var(--theme-bg-200);
+}
+
+.latest-articles .article-card {
+  margin-top: 1.5rem;
+}
+
+.latest-articles .article-card:first-of-type {
+  margin-top: 2rem;
 }
