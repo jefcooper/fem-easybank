@@ -17,6 +17,8 @@
     .menu__break         - provides a visible separator/gap to group menus
  *****************************************************************************/
 
+@use "sass:math";
+
 /**
   * menu
   */
@@ -42,7 +44,11 @@
   gap: var(--menu-gap);
 
   padding-block: var(--menu-padding-block);
-  padding-inline: var(--menu-padding-inline);
+  //padding-inline: var(--menu-padding-inline);
+  padding-inline: max(
+    $container-margin,
+    calc(50vw - math.div($container-max-width, 2))
+  );
 
   background-color: var(--menu-background-color);
 }
@@ -178,8 +184,10 @@
   cursor: pointer;
 }
 .menu__break {
+  /*
   padding-top: 1rem;
   border-top: 1px solid black;
+  */
 }
 
 /* Mobile-only */

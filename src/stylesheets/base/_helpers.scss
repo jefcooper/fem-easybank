@@ -5,6 +5,8 @@
  *
  *****************************************************************************/
 
+@use "sass:math";
+
 /**
  * .visually-hidden
  */
@@ -28,11 +30,8 @@
  *  when within the max-width.
  */
 .container > * {
-  --_container-margin: var(--container-margin, 1.5rem); /* mobile is default */
-  --_container-max-width: var(
-    --container-max-width,
-    1280px
-  ); /* desktop max width */
+  --_container-margin: #{$container-margin}; /* mobile is default */
+  --_container-max-width: #{$container-max-width}; /* desktop max width */
 
   max-width: var(--_container-max-width);
   margin-inline: max(

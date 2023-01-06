@@ -7,16 +7,7 @@
 
 @use "sass:map";
 
-/**
- * :root
- *
- *  The global context for any CSS variables.
- */
-:root {
-  --container-max-width: 1110px;
-  --container-margin: 1.5rem;
-}
-
+/// Container
 $container-max-width: 1110px !default;
 $container-margin: 1rem !default;
 
